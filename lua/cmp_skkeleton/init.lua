@@ -21,6 +21,7 @@ end
 source.complete = function(self, request, callback)
   local candidates = self:_get_candidates()
   local preeditlen = self:_get_pre_edit_length()
+  print(preeditlen)
   print(vim.inspect(candidates))
 
   local items = {}
