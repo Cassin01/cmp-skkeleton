@@ -14,7 +14,7 @@ source.get_debug_name = function()
 end
 
 source.get_keyword_pattern = function()
-  return [[\%([ぁ-ゖ]\+\)]]
+  return [[\%([ぁ-\u309F]\+\)]]
 end
 
 source.complete = function(self, request, callback)
