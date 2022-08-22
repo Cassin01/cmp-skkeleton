@@ -5,8 +5,7 @@ source.new = function()
 end
 
 source.is_available = function()
-  -- return vim.fn['skkeleton#is_enabled']()
-  return true
+  return vim.fn['skkeleton#is_enabled']()
 end
 
 source.get_debug_name = function()
