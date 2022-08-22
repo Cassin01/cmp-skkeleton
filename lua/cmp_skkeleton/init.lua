@@ -80,6 +80,8 @@ end
 source.execute = function(self, completion_item, callback)
   local kana = completion_item.filterText
   local word = completion_item.label
+  print(kana)
+  print(word)
   self:_register_candidate(kana, word)
 
   callback(completion_item)
