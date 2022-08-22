@@ -5,8 +5,9 @@ source.new = function()
 end
 
 source.is_available = function()
-  return true
-  -- return vim.fn['skkeleton#is_enabled']()
+  -- return true
+  print(vim.fn['skkeleton#is_enabled']())
+  return vim.fn['skkeleton#is_enabled']()
 end
 
 source.get_debug_name = function()
@@ -14,7 +15,7 @@ source.get_debug_name = function()
 end
 
 source.get_keyword_pattern = function()
-  return [[\%([ぁ-\u309F]\+\)]]
+  return [[\%([ぁ-ゖ]\+\)]]
 end
 
 source.complete = function(self, request, callback)
