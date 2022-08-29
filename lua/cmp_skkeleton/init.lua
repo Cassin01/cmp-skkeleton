@@ -6,7 +6,6 @@ end
 
 source.is_available = function()
   -- return true
-  print(vim.fn['skkeleton#is_enabled']())
   return vim.fn['skkeleton#is_enabled']()
 end
 
@@ -21,8 +20,6 @@ end
 source.complete = function(self, request, callback)
   local candidates = self:_get_candidates()
   local preeditlen = self:_get_pre_edit_length()
-  print(preeditlen)
-  print(vim.inspect(candidates))
 
   local items = {}
   local cnt = 0
@@ -80,8 +77,6 @@ end
 source.execute = function(self, completion_item, callback)
   local kana = completion_item.filterText
   local word = completion_item.label
-  print(kana)
-  print(word)
   self:_register_candidate(kana, word)
 
   callback(completion_item)
